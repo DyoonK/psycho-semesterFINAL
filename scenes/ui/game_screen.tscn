@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca0kodo823ud5"]
+
+[ext_resource type="Theme" uid="uid://c7jcy6tnqn1gx" path="res://scenes/ui/game_ui_theme.tres" id="1_e2vrk"]
+[ext_resource type="PackedScene" uid="uid://3a374r6re66c" path="res://scenes/ui/emotes_panel.tscn" id="1_gusqm"]
+[ext_resource type="PackedScene" uid="uid://dxt7pxeb4fbob" path="res://scenes/ui/tools_panel.tscn" id="2_gusqm"]
+
+[node name="GameScreen" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 630.0
+offset_bottom = 350.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="EmotesPanel" parent="VBoxContainer" instance=ExtResource("1_gusqm")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_e2vrk")
+
+[node name="ToolsPanel" parent="MarginContainer" instance=ExtResource("2_gusqm")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8

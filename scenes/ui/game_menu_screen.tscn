@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://tap83l5dul4c"]
+
+[ext_resource type="Script" uid="uid://clyutdwmh6egt" path="res://scenes/ui/game_menu_screen.gd" id="1_n8g7c"]
+[ext_resource type="Theme" uid="uid://c7jcy6tnqn1gx" path="res://scenes/ui/game_ui_theme.tres" id="1_yi7jb"]
+[ext_resource type="Texture2D" uid="uid://ifgmhfbd0je7" path="res://scenes/ui/thumb-1920-336742 (1).jpg" id="3_l5nq4"]
+
+[node name="GameMenuScreen" type="CanvasLayer"]
+script = ExtResource("1_n8g7c")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+theme = ExtResource("1_yi7jb")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GTdna3sWcAatC6(1)" type="Sprite2D" parent="MarginContainer/ColorRect"]
+position = Vector2(320, 184)
+texture = ExtResource("3_l5nq4")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 54
+text = "
+
+   PSYCHO BUNNY
+with an Axe..."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(100, 29)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StartGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"GameMenuButton"
+text = "START"
+
+[node name="StartGameButton3" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"GameMenuButton"
+text = "EXIT
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton3" to="." method="_on_start_game_button_3_pressed"]

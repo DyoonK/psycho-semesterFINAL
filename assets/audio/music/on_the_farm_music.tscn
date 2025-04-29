@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://1g4mpk1ec4jo"]
+
+[ext_resource type="AudioStream" uid="uid://36fct7axugbr" path="res://assets/audio/watery-graves-fast-version.ogg" id="1_g7o84"]
+
+[node name="OnTheFarmMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_g7o84")
+autoplay = true
+bus = &"Music"
